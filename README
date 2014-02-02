@@ -1,0 +1,32 @@
+@(#)rc5-client, v0x12ac3 1996/00/00 earle (genx)
+(c) Copyright 1997, Earle Ady and Christopher Stach, all rights reserved.
+
+Exporting this software probably won't get you kudos.
+
+This is the RC5 Key client designed and written for the RSA Data
+Security Contest.  The client distributed mainly in binary form,
+contains unrolled routines for quickly comparing ciphertext words
+for possible matches.  This client contacts the RC5 Key Server,
+which handles the distribution of keyspace, zero.genx.net.  All
+keys contain a default mask of 0x0000000FFFFFFF which should take
+roughly 35-40 minutes to exhaust under typical modern desktop
+workstations.  The Silicon Graphics R5000 180Mhz Indy systems which
+it was designed on performs in under eight seconds (130-140 thousand
+keys per second) with the benchmark measurements [-m].
+
+Keyspace is assigned pseudo-random-selectively from the server and 
+the client exhausts this assigned space sequentially.  The server 
+hands out higher probability keys first, saving unlikely patterened 
+keys for late distribution.
+
+For more information, send electronic mail to "info@genx.net".
+
+RC5 is (c) Copyright 1995, RSA Data Security, Inc
+
+For more information about RSA and their elite suite of products
+and services, please visit their website at http://www.rsa.com
+
+earle.
+
+   New Media Laboratories / New York, NY 10018 / 212.840.8600 (vox)
+	   	     info@genx.net | www.genx.net
